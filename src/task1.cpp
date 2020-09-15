@@ -3,7 +3,7 @@
 
 double delta = 0.00000001;
 
-double avarage(double x, double y)
+double average(double x, double y)
 {
 	return (x + y) / 2.0;
 }
@@ -13,7 +13,7 @@ bool good(double guess, double x)
 }
 double improve(double guess, double x)
 {
-	return avarage(guess, x / guess);
+	return average(guess, x / guess);
 }
 double iter(double guess, double x)
 {
