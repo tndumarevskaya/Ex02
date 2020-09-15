@@ -1,14 +1,9 @@
-#include <iostream>
 #include "task1.h"
-
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-	unsigned int n = 0;
-
-	cin >> n;
-
-	cout << getPrime(n);
+	double result = calc(24.0);
+	printf("Sqrt(%f) = %1f\n", 2.0, result);
+	return 0;
 }
-

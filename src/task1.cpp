@@ -1,30 +1,28 @@
-#include "task1.h"
-#include <iostream>
+﻿#include "task1.h"
+#include <math.h>
 
-using namespace std;
+double delta = 0.00000001;
 
-unsigned int getPrime(unsigned int n)
+double avarage(double x, double y)
 {
-	if (n == 0)
-		return 1;
-	else if (n == 1)
-		return 2;
+	return (x + y) / 2.0;
+}
+bool good(double guess, double x)
+{
+	return fabs(guess * guess - x) < delta;
+}
+double improve(double guess, double x)
+{
+	return avarage(guess, x / guess);
+}
+double iter(double guess, double x)
+{
+	if (good(guess, x))
+		return guess;
 	else
-	{
-		n--;
-		int k = 2;
-		while (n != 0)
-		{
-			k++;
-			bool isPrime = true;
-			for (int i = 2; i < k; i++)
-			{
-				if (k % i == 0)
-					isPrime = false;
-			}
-			if (isPrime)
-				n--;
-		}
-		return k;
-	}
+		return iter(improve(guess, x), x);
+}
+double calc(double arg)
+{
+	return iter(1.0, arg);
 }
