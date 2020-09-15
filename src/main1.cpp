@@ -4,6 +4,6 @@
 int main()
 {
 	double result = calc(2.0);
-	printf("Sqrt(%f) = %1f\n", 2.0, result);
+	printf("Sqrt(%1f) = %1f\n", 2.0, result);
 	return 0;
 }
