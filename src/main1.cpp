@@ -3,7 +3,7 @@
 
 int main()
 {
-	double result = calc(24.0);
+	double result = calc(2.0);
 	printf("Sqrt(%f) = %1f\n", 2.0, result);
 	return 0;
 }
