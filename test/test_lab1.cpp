@@ -3,50 +3,50 @@
 
 TEST(task1, test1)
 {
-	ASSERt_DOUBLE_EQ(1.0, calc(1.0));
+	ASSERT_NEAR(1.0, calc(1.0), 0.000001);
 }
 
-TEST(task1, test1)
+TEST(task1, test2)
 {
-	ASSER_DOUBLE_EQ(1.414214, calc(2.0));
+	ASSERT_NEAR(1.414214, calc(2.0), 0.000001);
 }
 
-TEST(task1, test1)
+TEST(task1, test3)
 {
-	ASSER_DOUBLE_EQ(1.732051, calc(3.0));
+	ASSERT_NEAR(1.732051, calc(3.0), 0.000001);
 }
 
-TEST(task1, test1)
+TEST(task1, test4)
 {
-	ASSER_DOUBLE_EQ(2.236068, calc(5.0));
+	ASSERT_DOUBLE_EQ(4.0, average(5.0, 3.0));
 }
 
-TEST(task1, test1)
+TEST(task1, test5)
 {
-	ASSER_DOUBLE_EQ(2.449490, calc(6.0));
+	ASSERT_DOUBLE_EQ(2.5, average(3.0, 2.0));
 }
 
-TEST(task1, test1)
+TEST(task1, test6)
 {
-	ASSER_DOUBLE_EQ(2.645751, calc(7.0));
+	ASSERT_DOUBLE_EQ(7.0, average(6.0, 8.0));
 }
 
-TEST(task1, test1)
+TEST(task1, test7)
 {
-	ASSER_DOUBLE_EQ(2.828427, calc(8.0));
+	ASSERT_TRUE(good(11.0, 121.0));
 }
 
-TEST(task1, test1)
+TEST(task1, test8)
 {
-	ASSER_DOUBLE_EQ(3.464102, calc(12.0));
+	ASSERT_FALSE(good(12.0, 10.0));
 }
 
-TEST(task1, test1)
+TEST(task1, test9)
 {
-	ASSER_DOUBLE_EQ(3.872983, calc(15.0));
+	ASSERT_DOUBLE_EQ(2.0, improve(3.0, 3.0));
 }
 
-TEST(task1, test1)
+TEST(task1, test10)
 {
-	ASSER_DOUBLE_EQ(4.898979, calc(24.0));
+	ASSERT_DOUBLE_EQ(3.0, iter(3.0, 9.0));
 }
